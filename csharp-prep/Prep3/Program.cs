@@ -4,20 +4,10 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Magic number
-        // Random randomGenerator = new Random();
-        // int magic = randomGenerator.Next(1, 100);
-
-        // Console.Write("What is the magic number? "); string magicNumber = Console.ReadLine(); int magic = int.Parse(magicNumber);
-
-
-
         // Declaring variables
         int attempts = 1;
         int magic = 0;
-        int guess = 1;
-
-        // Compare magic number with guess number
+        int guess = -1;
         string userInput = "yes";
 
         do
@@ -26,7 +16,6 @@ class Program
             Random randomGenerator = new Random();
             magic = randomGenerator.Next(1, 100);
 
-
             do
             {
                 // Request for a guess
@@ -34,7 +23,7 @@ class Program
                 string guessNumber = Console.ReadLine();
                 guess = int.Parse(guessNumber);
 
-                // Applying logic to guess magic number
+                // Applying logic and giving promptings
                 if (magic > guess)
                 {
                     Console.WriteLine("Higher");
