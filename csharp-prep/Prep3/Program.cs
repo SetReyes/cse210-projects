@@ -38,6 +38,7 @@ class Program
 
             } while (magic != guess);
 
+            // Showing attempts number & Asking user to continue playing or not
             Console.WriteLine($"You guessed it after {attempts} attempts!");
             Console.WriteLine("Do you want to continue? ");
             userInput = Console.ReadLine();
