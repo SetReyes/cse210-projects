@@ -34,6 +34,10 @@ class Program
         decimal countItems = numbers.Count();
         decimal aveNumber = (result / countItems);
 
+        // Another way to get the average with decimal
+        // float aveNumber = ((float)result) / numbers.Count;
+        // Console.WriteLine($"The average is: {aveNumber}");
+
         //List's max & min pos (two ways)
         int minPos = positive.AsQueryable().Min();
         int max = numbers.Max();
