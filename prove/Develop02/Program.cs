@@ -16,7 +16,7 @@ public class Program
         Iteration mySelection = new Iteration();
 
         // Initial message
-        Console.Write("Welcome to you Journal!");
+        Console.Write("Welcome to you Journal!\n");
 
         while (option != 5)
         {
