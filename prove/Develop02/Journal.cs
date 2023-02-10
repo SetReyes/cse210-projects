@@ -36,7 +36,6 @@ public class Journal
         foreach (string item in _addText)
             Console.WriteLine($"{item}\n");
     }
-
     // Loading entries
     public void LoadEntries()
     {
