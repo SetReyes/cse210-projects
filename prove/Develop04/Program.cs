@@ -35,11 +35,9 @@ class Program
                 Console.WriteLine(testCall1.MessageDisplay(selection));
                 Console.WriteLine();
                 testCall1.TimeRequest();
-                testCall1.SpinnerDisplay();
                 testCall1.RunBreathing(testCall1.GetTime());
                 testCall1.BreathingProcess();
                 testCall1.FinalMessage();
-                testCall1.SpinnerDisplay();
                 testCall1.BreathingStatistic();
             }
             // Reflecting Activity 
@@ -49,12 +47,10 @@ class Program
                 Console.WriteLine(testCall2.MessageDisplay(selection));
                 Console.WriteLine();
                 testCall2.TimeRequest();
-                testCall2.SpinnerDisplay();
                 testCall2.GetPromptR();
                 testCall2.RunReflecting();
                 testCall2.ReflectingProcess();
                 testCall2.FinalMessage();
-                testCall2.SpinnerDisplay();
             }
             else if (selection == "3")
             {
@@ -62,11 +58,10 @@ class Program
                 Console.WriteLine(testCall3.MessageDisplay(selection));
                 Console.WriteLine();
                 testCall3.TimeRequest();
-                testCall3.SpinnerDisplay();
                 testCall3.RunEnumeration();
                 testCall3.EnumerationProcess();
                 testCall3.FinalMessage();
-                testCall3.SpinnerDisplay();
+
             }
             else if (selection == "4")
             {

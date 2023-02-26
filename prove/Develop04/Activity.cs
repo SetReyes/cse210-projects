@@ -3,12 +3,11 @@ using System;
 public class Activity
 {
     // variables
-    protected string _messageOne;
-    protected string _messageFinal;
-    protected string _descriptionMesssage;
+    private string _messageOne;
+    private string _descriptionMesssage;
     protected int _time;
     private string[] spinnerStrings = { "|", "/", "-", "\\", "|", "/", "-", "\\" };
-    protected string _activity;
+    private string _activity;
     protected List<int> _statisticB = new List<int>();
     protected string[] _statisticR = Array.Empty<string>();
     protected string[] _statisticE = Array.Empty<string>();
@@ -49,6 +48,7 @@ public class Activity
         _time = int.Parse(time);
         Console.Clear();
         Console.WriteLine("Get Ready...");
+        SpinnerDisplay();
 
         // if (_activity == "Breathing")
         //    _statisticB.Add(_time);
@@ -98,8 +98,10 @@ public class Activity
     {
         Console.WriteLine();
         Console.WriteLine("Well Done!!");
-        Console.WriteLine();
+        SpinnerDisplay();
+
         Console.WriteLine($"You have completed another {_time} seconds of {_activity} Activity.");
+        SpinnerDisplay();
     }
 
 
