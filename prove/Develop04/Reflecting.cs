@@ -29,12 +29,12 @@ public class Reflecting : Activity
         Console.Read();
     }
 
-    public void RunReflecting()
+    public void RunReflecting() // Initiating reflection
     {
         Console.WriteLine("Now ponder in each of the following questions as they related to this experience.");
         CountdownDisplay("You may begin in: ", 5);
     }
-    public void ReflectingProcess()
+    public void ReflectingProcess() // Listing pondering questions
     {
         double var = Math.Ceiling(_time / 10.0);
         int qNumber = Convert.ToInt32 (var);
@@ -51,8 +51,5 @@ public class Reflecting : Activity
         }
 
     }
-    public string ReflectingStatistic()
-    {
-        return "a";
-    }
+    
 }

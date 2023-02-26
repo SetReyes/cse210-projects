@@ -6,16 +6,16 @@ public class Breathing : Activity
     // Member variables
 
     private string phaseOne = "Breathe in...";
-    string phaseTwo = "Breathe out...";
-    int _timeIn;
-    int _timeOut;
+    private string phaseTwo = "Breathe out...";
+    private int _timeIn;
+    private int _timeOut;
 
     // A constructor
     public Breathing() : base()
     {
     }
     // Behaviours or member functions
-    public void RunBreathing(int time, int _timeIn = 2, int _timeOut = 3)
+    public void RunBreathing(int time, int _timeIn = 2, int _timeOut = 3) // Example of the breathing exercise, creating fuction for future use bellow
     {
         Console.WriteLine();
         Console.Write(phaseOne);
@@ -38,7 +38,7 @@ public class Breathing : Activity
 
 
     }
-    public void BreathingProcess()
+    public void BreathingProcess() // Processing actual breathing exercise
     {
         int repeatingPeriod = _time / 10;
         int remainder = _time % 10;
@@ -63,7 +63,7 @@ public class Breathing : Activity
         }
     }
 
-    public void BreathingStatistic()
+    public void BreathingStatistic() // Not complete yet
     {
         // int result = _statisticB.AsQueryable().Sum();
 
@@ -73,7 +73,7 @@ public class Breathing : Activity
         }
         // Console.WriteLine($"Breathing Stats: {result} seconds in the Breathing Activity");
     }
-    public void DisplayStats()
+    public void DisplayStats() // Not complete yet
     {
         foreach (int item in _statisticB)
             Console.WriteLine($"{item}\n");

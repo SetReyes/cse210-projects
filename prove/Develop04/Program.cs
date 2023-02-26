@@ -17,10 +17,13 @@ class Program
             Console.WriteLine(" 3. Start listing activity ");
             Console.WriteLine(" 4. Quit ");
             Console.Write("Select a choice from the menu: ");
+            
             // Collect selection
             selection = Console.ReadLine();
+            
             // Instantiate Super Class
             Activity testCall = new Activity();
+            
             // Instatiate SubClasses
             Breathing testCall1 = new Breathing();
             Reflecting testCall2 = new Reflecting();
@@ -52,6 +55,7 @@ class Program
                 testCall2.ReflectingProcess();
                 testCall2.FinalMessage();
             }
+            // Listing Activity 
             else if (selection == "3")
             {
                 Console.WriteLine($"{testCall3.SelectionCall(selection)}");
@@ -61,7 +65,7 @@ class Program
                 testCall3.RunEnumeration();
                 testCall3.EnumerationProcess();
                 testCall3.FinalMessage();
-
+            // Quit Activities
             }
             else if (selection == "4")
             {
