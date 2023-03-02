@@ -1,20 +1,30 @@
 using System;
-
-class Program
+namespace shapes_areas
 {
-    static void Main(string[] args)
+    class Program
     {
-                int sum = 0;
-        int i = 0;
-        string[] cases = { "A", "B", "A", "B", "A", "B", "A", "B" };
-        Console.WriteLine("    " + " Count " + "Sum");
-
-        for (int count = 1; count < 9; count *= 2)         // A
+        static void Main(string[] args)
         {
-            
-            Console.WriteLine(cases[i] + "     " + count + "     " + sum);
-            sum += count; // B
-            Console.WriteLine(cases[i + 1] + "     " + count + "     " + sum);
+            List<Shape> shapes = new List<Shape>();
+
+            Rectangle testRectangle = new Rectangle("Green", 5, 3);
+            shapes.Add(testRectangle);
+            Square testSquare = new Square("Blue", 10.45452);
+            shapes.Add(testSquare);
+            Circle testCircle = new Circle("Cian", 1);
+            shapes.Add(testCircle);
+
+            foreach (Shape item in shapes)
+            {
+                // Passing color from parent class
+                string color = item.GetColor();
+
+                // Using abstract to call GetArea from parent class
+                double area = item.GetArea();
+
+                Console.WriteLine($"The area of the {color} geometric shape is {Math.Round(area, 2)} m2.");
+
+            }
         }
     }
 }
