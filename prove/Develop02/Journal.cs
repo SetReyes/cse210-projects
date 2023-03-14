@@ -63,8 +63,6 @@ public class Journal
                 outputFile.WriteLine(item);
         }
     }
-
-
 }
 
 
