@@ -1,58 +1,56 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.RegularExpressions;
+using System.IO;
 
 class Program
 {
     static void Main(string[] args)
     {
-        // This program receive input from the user that buys online products
-        // make a list of the selected products, with the total price per items
-        // plus the shipping cost, and the delivery information. It collects the
-        // information from user, and processes this data input with methods
-        // placed in each of the classes.
+        // Member variables
+        int sel = 0;
+        double _payment = 0;
 
-        
-        
-        // // Instantiations of classes 
-        // Reference initialText = new Reference();
-        // Scripture hideShowText = new Scripture();
-        // Word testingSee = new Word();
+        // Instantiations of classes 
+        Product product1 = new Product();
+        Order order1 = new Order();
+        Customer customer1 = new Customer();
 
-        // // Member variables
-        // string _answer = "";
-        // string _message = initialText.GetScriptureText();
-        // string[] _listT;
-        // string _newText;
-        // int _counter = 0;
-        // int _limiter = 0;
-
-        // // Calling class methods 
-        // do
-
-        // {
-        //     // Introduction
-        //     Console.WriteLine(initialText.GetCitation() + _message);
-
-        //     // Ask to select an option
-        //     Console.WriteLine("\nPress enter to continue or type 'quit' to finish:");
-        //     _answer = Console.ReadLine();
-        //     Console.Clear();
+        // Welcoming messasge
+        Console.WriteLine("\nWelcome to your favorite online store!");
+        do
+        {
+            // Show Menu
+            sel = product1.DisplayMenu();
             
-        //     // Modify scripture message
-        //     _listT = hideShowText.ListMaker(_message);
-        //     testingSee.Hide(_listT);
+            // Program Buying Options
+            if (0 < sel && sel < 8)
+            {
+                order1.SetOrderList(product1.ProductPrice(sel));
+                _payment = order1.TotalOrderCost();
+            }
 
-        //     _newText = hideShowText.DisplayRenderedText(_listT);
+            // Proceed to checkout
+            else if (sel == 8)
+            {
+                // Get customer's information
+                customer1.SetCustomerName();
+
+                // Labels
+                order1.PackingLabel();
+                order1.ShippingLabel(customer1.GetCustomerData());
+
+                // Indicate final transaction cost
+                Console.WriteLine($"Thank you for visiting you favorite online store!\nThe Total payment is: ${String.Format("{0:0.00}", _payment + customer1.GetShippingCost())}\n");
+            }
             
-        //     //Console.WriteLine(_newText);
-        //     _message = _newText;
-        //     _counter++;
+            // Cancel online buying
+            else if (sel == 9)
+            { Console.WriteLine("\nThank you for visiting us today!\n"); }
+            else
+            { Console.WriteLine("\nYour selection is invalid. Try again."); }
 
-        //     // Ensure that the scripture text completely disappears
-        //     if (_listT.Length % 3 == 0)
-        //         _limiter = 1 + (_listT.Length / 3);
-        //     else
-        //         _limiter = 1 + (2 + _listT.Length) / 3;
-
-        // } while (_answer != "quit" && _counter != _limiter);
+        } while (sel != 8 && sel != 9);
     }
 }
