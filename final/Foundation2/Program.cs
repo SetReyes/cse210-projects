@@ -10,7 +10,7 @@ class Program
     {
         // Member variables
         int sel = 0;
-        double _payment = 0;
+        double _payment = 0; 
 
         // Instantiations of classes 
         Product product1 = new Product();
