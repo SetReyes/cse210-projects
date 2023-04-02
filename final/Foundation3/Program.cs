@@ -8,8 +8,9 @@ class Program
         string _selection1;
         int _selection2;
 
+        // Clear Screen
         Console.Clear();
-
+        
         do
         {
             // Menu Options

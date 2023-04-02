@@ -8,12 +8,10 @@ namespace goals_book
         // A constructor
         public Eternal() : base()
         {
-
         }
         // Behaviours or member functions
         public override string RecordGoal()
         {
-            // if (goal == "2")
             {
                 _done = ". [ ] ";
                 Console.Write($"{_goalInformation[0]}");
@@ -23,9 +21,7 @@ namespace goals_book
                 Console.Write($"{_goalInformation[2]}");
                 _goalPoints = Convert.ToInt16(Console.ReadLine());
                 _displayList = _done + _name + " (" + _description + ") ";
-
             }
-
             return _displayList;
         }
         public override string RecordEvent(string name, string description, string goalPoints, string done = ". [ ] ", string repetitionsGoal = "", string bonusPoints = "", string repetitionsMade = "")
